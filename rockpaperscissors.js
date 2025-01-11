@@ -1,5 +1,8 @@
 console.log("Welcome to Rock Paper Scissors!");
 
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice () {
     
     let computerChoice = Math.floor(Math.random() * 3);
