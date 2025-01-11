@@ -18,4 +18,11 @@ function getComputerChoice () {
     }
 }
 
-console.log(getComputerChoice());
+function getHumanChoice () {
+    let humanChoice = prompt("Pick one, Rock, Paper, Scissors: ");
+
+    return humanChoice;
+}
+
+console.log("You chose: ", getHumanChoice());
+console.log("Computer chose: ", getComputerChoice());
