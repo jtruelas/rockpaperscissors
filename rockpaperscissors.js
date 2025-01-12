@@ -12,7 +12,7 @@ function getComputerChoice () {
 
 function getHumanChoice () {
     
-    let humanChoice = prompt("Welcome to Rock, Paper, Scissors!\nPick one, Rock, Paper, Scissors: ").toLowerCase();
+    let humanChoice = prompt("Pick one, Rock, Paper, Scissors: ").toLowerCase();
 
     return humanChoice;
 }
@@ -31,9 +31,9 @@ function playRound(humanChoice, computerChoice) {
     }
 
     // create end game messages
-    let winMessage = `You win! You chose: ${humanChoice}! I chose: ${computerChoice}!`;
-    let loseMessage = `You lose! You chose: ${humanChoice}! I chose: ${computerChoice}!`;
-    let tieMessage = `It's a tie! You chose: ${humanChoice}! I chose: ${computerChoice}!`;
+    let winMessage = `You win! You chose ${humanChoice}! I chose ${computerChoice}!`;
+    let loseMessage = `You lose! You chose ${humanChoice}! I chose ${computerChoice}!`;
+    let tieMessage = `It's a tie! You chose ${humanChoice}! I chose ${computerChoice}!`;
 
     // find winner of the round
     switch(humanChoice) {
@@ -85,5 +85,29 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-playRound(getHumanChoice(), getComputerChoice());
-console.log(`Total scores:\nYou: ${humanScore}\nMe: ${computerScore}`);
+function playGame() {
+    
+    let i = 0;
+    
+    while (humanScore != 3 && computerScore != 3 && humanScore + computerScore != 5) {
+        
+        // initiate round
+        playRound(getHumanChoice(), getComputerChoice());
+        
+        // list scores
+        console.log(`Total scores:\nYou: ${humanScore}\nMe: ${computerScore}`);
+    };
+
+    if (humanScore > computerScore) {
+        prompt("You won!\n(press enter to continue)");
+    }
+    else if (computerScore > humanScore) {
+        prompt("You lose!\n(press enter to continue)");
+    }
+    else {
+        prompt("It's a tie!\n(press enter to continue)");
+    }
+}
+
+prompt("Welcome to Rock, Paper, Scissors!\nLet's play best out of 5!\n(press enter to continue)");
+playGame();
