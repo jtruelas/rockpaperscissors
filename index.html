@@ -7,6 +7,9 @@
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="rockpaperscissors.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,8 +20,14 @@
             <button id="scissors" value="scissors">SCISSORS</button>
         </div>
         <div class="score-board">
-            <div class="player-score">0</div>
-            <div class="computer-score">0</div>
+            <div class="player-score">
+                <h1 class="player-title">Player</h1>
+                <p class="score">0</p>
+            </div>
+            <div class="computer-score">
+                <h1 class="computer-title">Computer</h1>
+                <p class="score">0</p>
+            </div>
         </div>
     </div>
 </body>
