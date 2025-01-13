@@ -31,7 +31,7 @@
 }
 
 .result-container > p {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .score-board {
@@ -68,7 +68,7 @@ button {
 }
 
 button:hover {
-    font-size: 2em;
+    font-size: 1.75em;
     background-color: #ffff0025;
     transition: font-size 0.3s ease,
     background-color 0.3s ease;
