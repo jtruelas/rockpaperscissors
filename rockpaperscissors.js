@@ -10,12 +10,14 @@ function getComputerChoice () {
     return computerChoice;
 }
 
+/* Legacy function prior to ui addition
 function getHumanChoice () {
     
     let humanChoice = prompt("Pick one, Rock, Paper, Scissors: ").toLowerCase();
 
     return humanChoice;
 }
+*/
 
 function playRound(humanChoice, computerChoice) {
 
@@ -109,5 +111,10 @@ function playGame() {
     }
 }
 
-prompt("Welcome to Rock, Paper, Scissors!\nLet's play best out of 5!\n(press enter to continue)");
-playGame();
+// create event listeners
+const btns = document.querySelectorAll("button");
+btns.forEach((button) => {
+    button.addEventListener("click", () => {
+        playRound(button.value, getComputerChoice())
+    });
+});
