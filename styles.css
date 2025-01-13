@@ -2,18 +2,65 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Inconsolata, sans-serif;
 }
 
 .container {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 2em;
+}
+
+.selection-container {
+    display:flex;
+    gap: 2.5em;
+}
+
+.score-board {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5em;
+}
+
+.player-score,
+.computer-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-title,
+.computer-title {
+    border-bottom: 5px dotted black;
+}
+
+.score {
+    padding: 15px 0;
+    font-size: 2em;
 }
 
 button {
     padding: 8px 16px;
     border-radius: 5px;
+    font-size: 1.5em;
+}
+
+button:hover {
+    font-size: 2em;
+    background-color: #ffff0025;
+    transition: font-size 0.3s ease,
+    background-color 0.3s ease;
+}
+
+button:active {
+    font-size: 1.25em;
+    background-color: #ff7b2535;
+    transition: font-size 0.2s ease,
+    background-color 0.2s ease;
 }
