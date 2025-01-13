@@ -20,6 +20,20 @@
     gap: 2.5em;
 }
 
+.result-container {
+    width: 25%;
+    height: 15%;
+    border: .75em inset #b2b2b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.result-container > p {
+    font-size: 2em;
+}
+
 .score-board {
     width: 25%;
     display: flex;
